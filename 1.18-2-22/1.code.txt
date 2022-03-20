@@ -1,0 +1,50 @@
+
+1st table-Movies
+
+INSERT INTO `movies`(`title`, `director`, `myear`, `rating`) VALUES ('Fargo','Coen',1996,8.2)';
+INSERT INTO `movies`(`title`, `director`, `myear`, `rating`) VALUES ('Raising Arizona','Coen',1987,7.6)';
+INSERT INTO `movies`(`title`, `director`, `myear`, `rating`) VALUES ('Spiderman','Raimi',2002,7.4)';
+INSERT INTO `movies`(`title`, `director`, `myear`, `rating`) VALUES ('Wonder Boys','Hanson',2000,7.6)';
+
+2nd table-Actors
+
+INSERT INTO `Actors`(`actor`, `ayear`) VALUES ('cago',1964);
+INSERT INTO `Actors`(`actor`, `ayear`) VALUES ('Hanks',1956);
+INSERT INTO `Actors`(`actor`, `ayear`) VALUES ('Maguire',1975);
+INSERT INTO `Actors`(`actor`, `ayear`) VALUES ('McDormand',1957);
+
+
+3rd table-Acts
+
+INSERT INTO `Acts`(`actor`, `title`) VALUES ('cago',`Raising Arizona`);
+INSERT INTO `Acts`(`actor`, `title`) VALUES ('Maguire','Spiderman');
+INSERT INTO `Acts`(`actor`, `title`) VALUES ('Maguire','Wonder Boys');
+INSERT INTO `Acts`(`actor`, `title`) VALUES ('McDormand','Fargo');
+INSERT INTO `Acts`(`actor`, `title`) VALUES ('McDormand',`Raising Arizona`);
+
+
+
+table4-Director
+
+INSERT INTO `Directors`(`director`, `dyear`) VALUES ('Coen',1954);
+INSERT INTO `Directors`(`director`, `dyear`) VALUES ('Hanson',1945);
+INSERT INTO `Directors`(`director`, `dyear`) VALUES ('Raimi',1959);
+
+
+1.SELECT * FROM `movies` WHERE `myear`>1997;
+2.SELECT * FROM `movies` WHERE `director`='Hanson' and `myear`>1997;
+3.SELECT `title`,`rating` FROM `movies` WHERE 1;
+4.SELECT * FROM `directors` WHERE 1;
+SELECT * FROM `directors` WHERE 1;
+           or
+4.SELECT `actor` FROM `actors`  ;
+  SELECT `director`  FROM  `directors`; 
+            or
+4.SELECT `actor`,`director` FROM `actors`  , `directors`;
+
+5.SELECT `title`,`director`='Coen' FROM `movies` ;
+ SELECT `title`,`actor`='McDormand' FROM `acts`;
+
+
+  SELECT * FROM `movies` WHERE `director`='Coen' ; 
+  SELECT * FROM `acts` WHERE `actor`='McDormand' ;
